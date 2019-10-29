@@ -39,8 +39,16 @@ return (
       <p className="card-text">
         Book
       </p>
-      
-      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+
+  {/* Search Form  */}
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+        </div>
+        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
+      </div>
+  
+  {/* Search button */}
+      <button className="btn btn-outline-success my-2 my-sm-0 float-right" type="submit">
         Search
      </button> 
 </div>
