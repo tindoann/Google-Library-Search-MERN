@@ -4,7 +4,7 @@ import React from "react";;
 import AppBar from './AppBar'; 
 import Jumbotron from './Jumbotron'; 
 import SearchCard from './SearchCard'; 
-// import ResultCard from './ResultCard'; 
+import ResultCard from './ResultCard'; 
 
 function NavBar() {
 return (
@@ -12,7 +12,7 @@ return (
   <AppBar />
   <Jumbotron />
   <SearchCard />
-  {/* <ResultCard /> */}
+  <ResultCard />
 </div>
  );
 }
