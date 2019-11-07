@@ -6,7 +6,7 @@ const SearchCard = () => (
     <div className="card-header">
       <h3 className="card-title">Book Search</h3>
     </div>
-    <div className="card-body">
+    <div className="card-body"> 
       <p className="card-text">
         Book
       </p>
@@ -24,6 +24,13 @@ const SearchCard = () => (
     </div>
   </div>
 
-)
+  class Books extends Component {
+    state = {
+      
+    }
+        
+        }
+    }
+
 
 export default SearchCard; 
