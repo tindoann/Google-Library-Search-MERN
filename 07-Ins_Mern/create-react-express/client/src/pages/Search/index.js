@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { List, ListItem } from "../../components/List";
 import SaveBtn from "../../components/SaveBtn";
-// import SavedAPI from "../../utils/SavedAPI";
 import SearchAPI from "../../utils/SearchAPI";
 
 // Setting the component's initial state
