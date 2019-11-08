@@ -3,7 +3,7 @@ import { Link } from 'react';
 
 
 // Taken from final project 
-const AppBar = () => (
+const Navbar = () => (
 
 <nav className="navbar navbar-expand-lg">
     <Link className="navbar-brand" to="/">
@@ -36,4 +36,4 @@ const AppBar = () => (
     </nav>
   );
 
-export default AppBar; 
+export default Navbar; 

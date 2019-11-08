@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { List, ListItem } from "../../components/List";
 import SaveBtn from "../../components/SaveBtn";
-import SavedAPI from "../../utils/SavedAPI";
+// import SavedAPI from "../../utils/SavedAPI";
 import SearchAPI from "../../utils/SearchAPI";
 
 // Setting the component's initial state
@@ -32,7 +32,7 @@ class Search extends Component {
     e.preventDefault(); 
     let searchTerm = this.state.search.replace(" ", "+"); 
     SearchAPI.getGoogleBooks(searchTerm)
-      .then(response => {
+      .then(res => {
         this.setState({ books: res.data.items, search: "" })
       })
       .catch(err => console.log(err));
