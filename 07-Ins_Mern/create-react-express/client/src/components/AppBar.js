@@ -1,4 +1,6 @@
 import React from 'react'; 
+import { Link } from 'react'; 
+
 
 // Taken from final project 
 const AppBar = () => (
