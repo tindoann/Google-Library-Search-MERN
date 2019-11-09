@@ -84,7 +84,7 @@ class Search extends Component {
                                     <ListItem key={index} >
                                         <div className="d-inline-flex">
                                             <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.volumeInfo.title}></img>
-                                            <strong className="ml-3">
+                                            <div className="ml-3">
                                                 {book.volumeInfo.title} by {book.volumeInfo.authors.map((author, index) => {
                                                     if (book.volumeInfo.authors.length === 1) {
                                                         return author;
@@ -96,7 +96,7 @@ class Search extends Component {
                                                         return author + ", "
                                                     }
                                                 })}
-                                            </strong>
+                                            </div>
                                         </div>
 
                                         <p>{book.volumeInfo.description}</p>
