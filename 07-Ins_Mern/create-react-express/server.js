@@ -17,8 +17,19 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes); 
 
 //Connect to our Mongoose database.
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
+const mongoRoute = process.env.MONGODB_URI || `mongodb://localhost/googlebooks`;
+mongoose.Promise = global.Promise;
+mongoose.connect(mongoRoute);
+
+let db = mongoose.connection;
+
+db.once('open', () => console.log('connected to the database'));
+
+// checks if connection with the database is successful
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
+
+// server
