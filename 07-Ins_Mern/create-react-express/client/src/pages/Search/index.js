@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import { List, ListItem } from "../../components/List";
 import SaveBtn from "../../components/SaveBtn";
 import SearchAPI from "../../utils/SearchAPI";
+import SavedAPI from "../../utils/SavedAPI";
+
 
 // Setting the component's initial state
 
 class Search extends Component {
 
-  
   state = {
     
     books: [], 
@@ -36,6 +37,25 @@ class Search extends Component {
       })
       .catch(err => console.log(err));
   };
+
+  saveBook = (id) => {
+
+    console.log(id);
+    let book = this.state.books[id];
+
+    SavedAPI.saveBook({
+        title: book.volumeInfo.title,
+        authors: book.volumeInfo.authors,
+        description: book.volumeInfo.description,
+        image: book.volumeInfo.imageLinks.thumbnail,
+        link: book.volumeInfo.canonicalVolumeLink
+
+    })
+        .then(res => this.setState({ books: this.state.books.filter((book, index) => index !== id) }))
+        .catch(err => console.log(err));
+}
+
+
 
   render() {
     return (
